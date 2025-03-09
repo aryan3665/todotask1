@@ -1,0 +1,122 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #2d2d2d;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin: 0 0 1.5rem 0;
+    color: #28a79c;
+    font-size: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todo-input {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #3d3d3d;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #28a79c;
+    box-shadow: 0 0 0 3px rgba(40, 167, 156, 0.2);
+}
+
+button {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    background: #28a79c;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: #218c7c;
+    transform: translateY(-1px);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0 0;
+}
+
+li {
+    background: #333;
+    color: #ffffff;
+    /* Added text color */
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+li:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.delete {
+    background: #dc3545;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+}
+
+.delete:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+    background: #2d2d2d;
+    border-left: 4px solid #28a79c;
+    color: #cccccc;
+    /* Lighter color for completed items */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+li {
+    animation: fadeIn 0.3s ease-out;
+}
